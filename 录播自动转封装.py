@@ -16,7 +16,7 @@ try:
     zm.close()
 
 except FileNotFoundError:
-    zm = open(cwd + "\\录播自动转码设置")
+    zm = open(cwd + "\\录播自动转码设置", "w")
     The_Path = input("输入路径")
     zm.write(The_Path)
     zm.close()
