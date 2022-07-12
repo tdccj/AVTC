@@ -1,5 +1,5 @@
 # coding = utf-8
-# 录播自动转封装v2.0 @tdccj
+# 录播自动转码v2.0 @tdccj
 
 from watchdog.events import FileSystemEventHandler
 print("watchdog_1装载成功")
@@ -15,13 +15,13 @@ print("os装载成功")
 cwd = os.getcwd()
 
 try:
-    zm = open(cwd + "\\录播自动转封装设置.zm", "r")
+    zm = open(cwd + "\\录播自动转码设置.zm", "r")
     The_Path = zm.readline()
     print(The_Path)
     zm.close()
 
 except FileNotFoundError:
-    zm = open(cwd + "\\录播自动转封装设置.zm", "w")
+    zm = open(cwd + "\\录播自动转码设置.zm", "w")
     The_Path = input("输入路径")
     zm.write(The_Path)
     zm.close()
@@ -61,7 +61,7 @@ if __name__ == "__main__":  # 用observe对目录进行检测
         observer.schedule(event_handler, path, recursive=True)
         observer.start()
     except FileNotFoundError:
-        zm = open(cwd + "\\录播自动转封装设置.zm", "w")
+        zm = open(cwd + "\\录播自动转码设置.zm", "w")
         The_Path = input("输入路径2")
         zm.write(The_Path)
         zm.close()
