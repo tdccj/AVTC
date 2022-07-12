@@ -2,10 +2,15 @@
 # 录播自动转封装v2.0 @tdccj
 
 from watchdog.events import FileSystemEventHandler
+print("watchdog_1装载成功")
 from watchdog.observers import Observer
+print("watchdog_2装载成功")
 import time
+print("time装载成功")
 from ffmpy3 import *
+print("ffmpy3装载成功")
 import os
+print("os装载成功")
 
 cwd = os.getcwd()
 
@@ -16,7 +21,7 @@ try:
     zm.close()
 
 except FileNotFoundError:
-    zm = open(cwd + "\\录播自动转封装设置", "w")
+    zm = open(cwd + "\\录播自动转封装设置.zm", "w")
     The_Path = input("输入路径")
     zm.write(The_Path)
     zm.close()
