@@ -1,5 +1,6 @@
 # coding = utf-8
 # 录播自动转码v2.0 @tdccj
+#已弃用，flv录播文件只需要转封装
 
 from watchdog.events import FileSystemEventHandler
 print("watchdog_1装载成功")
